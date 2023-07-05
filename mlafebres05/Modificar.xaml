@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mlafebres05.Modificar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Modificar Estudiante" FontSize="20" HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtCodigo" Placeholder="Modificar Còdigo" Keyboard="Numeric"/>
+            <Entry x:Name="txtNombre" Placeholder="Modificar Nombre"/>
+            <Entry x:Name="txtApellido" Placeholder="Modificar Apellido"/>
+            <Entry x:Name="txtEdad" Placeholder="Modificar Edad" Keyboard="Numeric"/>
+            <Button x:Name="btnModificar" Text="Modificar" Clicked="btnModificar_Clicked"/>
+            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
