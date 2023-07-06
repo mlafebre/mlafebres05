@@ -22,16 +22,20 @@ namespace mlafebres05
         {
 			try
 			{
-				WebClient cliente = new WebClient ();
+				WebClient cliente = new WebClient();
 				string URL = "http://192.168.17.28/ws_uisrael/post.php";
 				var parametros = new System.Collections.Specialized.NameValueCollection();
 				parametros.Add("codigo", txtCodigo.Text);
 				parametros.Add("nombre", txtNombre.Text);
 				parametros.Add("apellido", txtApellido.Text);
 				parametros.Add("edad", txtEdad.Text);
-				cliente.UploadValues(URL,"POST",parametros);
-				DisplayAlert("Alerta", "Ingreso Correcto", "Cerrar");
-				Navigation.PushAsync(new Insertar());
+				cliente.UploadValues(URL, "POST", parametros);
+				
+				//mensaje TOAST
+				var mensaje = "Dato Ingresado";
+				DependencyService.Get<Mensaje>().LongAlert(mensaje);
+
+				Navigation.PushAsync(new Insertar());	
 
             }
 			catch (Exception)

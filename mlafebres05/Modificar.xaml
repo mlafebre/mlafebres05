@@ -9,8 +9,22 @@
             <Entry x:Name="txtNombre" Placeholder="Modificar Nombre"/>
             <Entry x:Name="txtApellido" Placeholder="Modificar Apellido"/>
             <Entry x:Name="txtEdad" Placeholder="Modificar Edad" Keyboard="Numeric"/>
-            <Button x:Name="btnModificar" Text="Modificar" Clicked="btnModificar_Clicked"/>
-            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked"/>
+         
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnGuardar" Text="Actualizar"   Grid.Row="1" Grid.Column="0" Clicked="btnModificar_Clicked"/>
+                <Button x:Name="btbEliminar" Text="Eliminar"   Grid.Row="1" Grid.Column="1"  Clicked="btnEliminar_Clicked"/>
+
+            </Grid>
             
         </StackLayout>
     </ContentPage.Content>

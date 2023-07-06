@@ -28,5 +28,11 @@ namespace mlafebres05
             datos = new ObservableCollection<Datos>(listPost);
             listaEstudiantes.ItemsSource = datos;
         }
+
+        private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var objetoEstudiante = (Datos)e.SelectedItem;
+            Navigation.PushAsync(new Modificar(objetoEstudiante));
+        }
     }
 }

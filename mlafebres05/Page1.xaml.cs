@@ -40,7 +40,8 @@ namespace mlafebres05
 
         private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            var objetoEstudiante = (Datos)e.SelectedItem;
+            Navigation.PushAsync(new Modificar(objetoEstudiante));
         }
     }
 }

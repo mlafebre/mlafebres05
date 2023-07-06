@@ -5,7 +5,7 @@
 
     <StackLayout>
         <Label Text="CONSUMO DE SERVICIO WEB" HorizontalTextAlignment="Center" FontSize="24"> </Label>
-        <ListView x:Name="listaEstudiantes">
+        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
