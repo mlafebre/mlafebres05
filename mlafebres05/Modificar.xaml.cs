@@ -28,7 +28,7 @@ namespace mlafebres05
 			try
 			{
                 WebClient cliente = new WebClient();
-                string URL = $"http://192.168.17.28/ws_uisrael/post.php?codigo={txtCodigo.Text}&nombre={txtNombre.Text}&apellido={txtApellido.Text}&edad={txtEdad}";
+                string URL = $"http://192.168.17.28/ws_uisrael/post.php?codigo={txtCodigo.Text}&nombre={txtNombre.Text}&apellido={txtApellido.Text}&edad={txtEdad.Text}";
                 var parametros = new System.Collections.Specialized.NameValueCollection();
                 parametros.Add("codigo", txtCodigo.Text);
                 parametros.Add("nombre", txtNombre.Text);
